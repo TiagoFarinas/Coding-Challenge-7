@@ -37,4 +37,9 @@ const company = {
                     salary: 68000,
                     subordinates: []}]}]};
 
-                    
+//Task 2 - Create recursive function to calculate department salary
+function calculateDepartmentSalary(employee) {
+    let totalSalary = employee.salary; //Begin with the salary of the employees
+    employee.subordinates.forEach(subordinate => {
+        totalSalary += calculateDepartmentSalary(subordinate)});//Add the salaries of the subordinates
+        return totalSalary};//End with the total sum
