@@ -54,3 +54,15 @@ function calculateCompanySalary(company) {
             totalDepartmentSalary += calculateDepartmentSalary(employee)});
         totalCompanySalary += totalDepartmentSalary; });// Calculate the total value
     return totalCompanySalary};
+
+    //Test the functions
+    //task 2 test
+    const salesDepartment = company.departments[1]; 
+    let salesSalaryTotal = 0;
+    salesDepartment.employees.forEach(employee => {
+       salesSalaryTotal += calculateDepartmentSalary(employee)});
+    console.log(`Sales department's total salary is: $${salesSalaryTotal}`);
+    
+//task 3 test
+const salaryTotal = calculateCompanySalary(company);
+console.log(`Company's total salary is: $${salaryTotal}`);
